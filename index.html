@@ -162,6 +162,26 @@ w<!DOCTYPE html>
         <a href="#informasi">Informasi</a>
     </nav>
 
+    <audio id="musik" autoplay loop>
+        <source src="" type ="audio/mpeg">
+        Browser Anda Tidak Mendukung Audio.
+        </audio>
+    <button onclick="toggleMusik()" id="tombolMusik">
+    🔇 
+</button>
+
+<script>
+function toggleMusik() {
+    const musik = document.getElementById("musik");
+    const tombol = document.getElementById("tombolMusik");
+
+    if (musik.paused) {
+        musik.play();
+        tombol.innerHTML = "🔇";
+    } else {
+        musik.pause();
+        tombol.innerHTML = "🔊 ";
+    }
     <!-- BERANDA -->
     <section id="beranda">
         <h2>Selamat Datang</h2>
